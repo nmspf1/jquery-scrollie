@@ -1,11 +1,10 @@
-/*
+/***
  * jQuery Scrollie Plugin v1.0.1
  * https://github.com/Funsella/jquery-scrollie
  *
  * Copyright 2013 JP Nothard
  * Released under the MIT license
  */
-
 ;(function ( $, window, document, undefined ) {
 
     "use strict";
@@ -17,8 +16,8 @@
             scrollOffset : 0, //
             scrollRatio  : 2, 
             scrollingInView : null, // activates when the whole element is moving inside the window
-            ScrollingToTheTop : null, // activates when it enters the window and stops when it reaches the top
-            ScrollingOutOfView : null, // actives when the element reaches the top of the window and stops when it is out of the window
+            scrollingToTheTop : null, // activates when it enters the window and stops when it reaches the top
+            scrollingOutOfView : null, // actives when the element reaches the top of the window and stops when it is out of the window
             scrolledOutOfView : null  // activates wehn the element is completly out of the window
     };
 
@@ -80,7 +79,7 @@
              *---------------------------------------------------------------------------------*/
             if( movingToTheTop ){ //revised and offset complete
                   
-                jQuery.isFunction(self.settings.ScrollingToTheTop) && self.settings.ScrollingToTheTop.call( this, this.$scrollElement, self.$scrollOffset, direction, coords, scrollRatio, thisTop, winPos );    
+                jQuery.isFunction(self.settings.scrollingToTheTop) && self.settings.scrollingToTheTop.call( this, this.$scrollElement, self.$scrollOffset, direction, coords, scrollRatio, thisTop, winPos );    
 
             } 
 
@@ -100,7 +99,7 @@
              *------------------------------------------------------------------------------------*/
             if( atTheTop ){ //revised and offset complete
                   
-                jQuery.isFunction(self.settings.ScrollingOutOfView) && self.settings.ScrollingOutOfView.call( this, this.$scrollElement, self.$scrollOffset, direction, coords, scrollRatio, thisTop, winPos );    
+                jQuery.isFunction(self.settings.scrollingOutOfView) && self.settings.scrollingOutOfView.call( this, this.$scrollElement, self.$scrollOffset, direction, coords, scrollRatio, thisTop, winPos );    
                 
             }
 
