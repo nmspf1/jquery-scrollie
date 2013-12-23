@@ -39,12 +39,12 @@ $('.selector').scrollie({
         /* your code in here */
 
     },
-    ScrollingToTheTop : function(elem, offset, direction, coords, scrollRatio, thisTop, winPos){
+    scrollingToTheTop : function(elem, offset, direction, coords, scrollRatio, thisTop, winPos){
 
         /* your code in here */
 
     },
-    ScrollingOutOfView : function(elem, offset, direction, coords, scrollRatio, thisTop, winPos){
+    scrollingOutOfView : function(elem, offset, direction, coords, scrollRatio, thisTop, winPos){
 
         /* your code in here */
 
@@ -76,8 +76,8 @@ The options for `scrollOffset` and `speed` can also be set by using a data attri
 | Property            | Description                                                                      |
 | ------------------- |:--------------------------------------------------------------------------------:|
 | scrollingInView     | Will run from the point the element enters the window till the bottom of the element exits the top of the window	|
-| ScrollingToTheTop   |	Will run from the point the element enters the window and stops when it reaches the top 	|
-| ScrollingOutOfView  |	Will run from the point the element reaches the top of the window and stops when it is out of the window	|
+| scrollingToTheTop   |	Will run from the point the element enters the window and stops when it reaches the top 	|
+| scrollingOutOfView  |	Will run from the point the element reaches the top of the window and stops when it is out of the window	|
 | scrolledOutOfView   |	Will run from the point the element is completely out of the window	 |
 
 All the callback functions will have a set of properties that you can use inside of each call back function
