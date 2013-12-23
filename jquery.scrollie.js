@@ -1,10 +1,11 @@
-/***
+/****
  * jQuery Scrollie Plugin v1.0.1
  * https://github.com/Funsella/jquery-scrollie
  *
  * Copyright 2013 JP Nothard
  * Released under the MIT license
  */
+
 ;(function ( $, window, document, undefined ) {
 
     "use strict";
@@ -66,7 +67,7 @@
 
             var self = this,
                 coords = (((winPos - thisTop) * -1) - winHeight) * -1,
-                scrollRatio = ((winPos - thisTop) * -1) / self.$scrollscrollRatio,
+                scrollRatio = coords / 2,
                 movedOut = coords < winHeight + self.$elemHeight,
                 movingIn = ( coords ) > 0 - (self.$scrollOffset),
                 movingToTheTop = movingIn && coords < winHeight,
