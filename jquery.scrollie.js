@@ -16,6 +16,7 @@
             direction : "both", // 'up', 'down'
             scrollOffset : 0, //
             scrollRatio  : 2, 
+            scrollOn: $(window), //allow to change the scrollable element 
             scrollingInView : null, // activates when the whole element is moving inside the window
             scrollingToTheTop : null, // activates when it enters the window and stops when it reaches the top
             scrollingOutOfView : null, // actives when the element reaches the top of the window and stops when it is out of the window
@@ -127,7 +128,7 @@
                 scroll_ok = true;
             }, 66);//33ms is 30fps, you can try changing this to something larger for better performance
 
-            $(window).on('scroll', function(){
+            self.settings.scrollOn.on('scroll', function(){
 
                 var windowPos = $(this).scrollTop(),
                     winHeight = $(this).height(),
